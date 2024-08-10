@@ -1,3 +1,15 @@
+rknn2 (2.1.0-1) jammy; urgency=medium
+
+  [ Harry zklcdc ]
+  * Support RV1103B (Beta)
+  * Support RK2118 (Beta)
+  * Support Flash Attention (Only RK3562 and RK3576)
+  * Improve MatMul API
+  * Improve support for int32 and int64
+  * Support more operators and operator fusion
+
+ -- "Harry-zklcdc" <zklcdc@qq.com>  Sat, 10 Aug 2024 17:18:32 +0800
+
 rknn2 (2.0.0~beta0-2) jammy; urgency=medium
 
   [ ZHANG Yuntian ]
