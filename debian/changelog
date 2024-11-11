@@ -1,3 +1,13 @@
+rknn2 (2.3.0-1) jammy; urgency=medium
+
+  [ Harry zklcdc ]
+  * RKNN-Toolkit2 support ARM64 architecture
+  * RKNN-Toolkit-Lite2 support installation via pip
+  * Add support for W4A16 symmetric quantization (RK3576)
+  * Operator optimization, such as LayerNorm, LSTM, Transpose, MatMul, etc.
+
+ -- "Harry-zklcdc" <zklcdc@qq.com>  Mon, 11 Nov 2024 17:39:32 +0800
+
 rknn2 (2.1.0-1) jammy; urgency=medium
 
   [ Harry zklcdc ]

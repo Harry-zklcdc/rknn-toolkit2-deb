@@ -3,7 +3,7 @@ PREFIX ?= /usr
 BINDIR ?= $(PREFIX)/bin
 LIBDIR ?= $(PREFIX)/lib
 MANDIR ?= $(PREFIX)/share/man
-VERSION := 2.1.0
+VERSION := 2.3.0
 
 .PHONY: all
 all: build
@@ -32,8 +32,9 @@ $(SRC-DOC):
 $(SRC-DOC)/SOURCE: $(SRC-DOC)
 	echo -e "git clone $(shell git remote get-url origin)\ngit checkout $(shell git rev-parse HEAD)" > "$@"
 
-rknnlite2: rknn-toolkit2/rknn-toolkit-lite2/packages/rknn_toolkit_lite2-$(VERSION)-cp311-cp311-linux_aarch64.whl
-	wheel unpack -d "$@" "$<"
+rknnlite2: rknn-toolkit2/rknn-toolkit-lite2/packages/rknn_toolkit_lite2-$(VERSION)-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+	cp "$<" rknn-toolkit2/rknn-toolkit-lite2/packages/rknn_toolkit_lite2-$(VERSION)-cp311-cp311-linux_aarch64.whl
+	wheel unpack -d "$@" rknn-toolkit2/rknn-toolkit-lite2/packages/rknn_toolkit_lite2-$(VERSION)-cp311-cp311-linux_aarch64.whl
 
 RKNNLITE2		:=	rknnlite2/rknn_toolkit_lite2-$(VERSION)/rknnlite
 .PHONY: patch_rknnlite2
